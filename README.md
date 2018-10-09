@@ -1,7 +1,13 @@
 # winston
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/indexzero/winston-mongodb?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Travis](https://travis-ci.org/kitmi/winston-mongodb.svg?branch=master)](https://travis-ci.org/kitmi/winston-mongodb)
 
 A MongoDB transport for [winston][0].
+
+## Private Hotfix Version
+
+* Forked from https://github.com/winstonjs/winston-mongodb 
+* Well-tested by Travis-CI
+* Fixed some bugs caused by MongoDB driver upgrade
 
 Current version supports only mongodb driver version 3.x and winston 3.x. If you want to use
 winston-mongodb with mongodb version 1.4.x use winston-mongodb <1.x. For mongodb 2.x use
@@ -73,13 +79,12 @@ settled by mongodb, defaults to `false`.
 ## Installation
 
 ``` bash
-  $ npm install winston
-  $ npm install winston-mongodb
+  $ npm install kitmi/winston-mongodb
 ```
 
 ## [Changelog](https://github.com/winstonjs/winston-mongodb/releases)
 
 #### Author: [Charlie Robbins](http://blog.nodejitsu.com)
-#### Contributors: [Yurij Mikhalevich](https://github.com/yurijmikhalevich), [Kendrick Taylor](https://github.com/sktaylor), [Yosef Dinerstein](https://github.com/yosefd), [Steve Dalby](https://github.com/stevedalby)
+#### Contributors: [Yurij Mikhalevich](https://github.com/yurijmikhalevich), [Kendrick Taylor](https://github.com/sktaylor), [Yosef Dinerstein](https://github.com/yosefd), [Steve Dalby](https://github.com/stevedalby), [Rockie Guo](https://github.com/rockie)
 
 [0]: https://github.com/winstonjs/winston
