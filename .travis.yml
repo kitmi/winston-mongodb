@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "node"  
+  - "lts/*"
+cache:
+  directories:
+    - "node_modules"
+services:
+  - mongodb    
+before_script:
+  - sleep 15
+  - mongo winston --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
+script: npm run travis

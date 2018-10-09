@@ -17,11 +17,15 @@
     {
       "name": "Steve Dalby",
       "email": "steve@stevedalby.co.uk"
+    },
+    {
+      "name": "Rockie Guo",
+      "email": "rockie@kitmi.com.au"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/indexzero/winston-mongodb.git"
+    "url": "http://github.com/kitmi/winston-mongodb.git"
   },
   "keywords": [
     "logging",
@@ -32,11 +36,15 @@
     "log",
     "logger"
   ],
+  "peerDependencies": {
+    "winston": "^3"
+  },
   "dependencies": {
-    "mongodb": "^3.1.0"
+    "mongodb": "^3.1.6",
+    "winston-transport": "^4.2.0"
   },
   "devDependencies": {
-    "abstract-winston-transport": "~0.5.1",
+    "abstract-winston-transport": "kitmi/abstract-winston-transport",
     "mocha": "^5.2.0",
     "mongoose": "^5.2.6",
     "winston": "^3.0.0"
@@ -47,6 +55,7 @@
   "main": "./lib/winston-mongodb",
   "scripts": {
     "test": "mocha test/*-test.js",
+    "travis": "USER_MONGODB_URL='mongodb://travis:test@localhost:27017/winston' mocha test/*-test.js",
     "test-rs": "WINSTON_MONGODB_URL='mongodb://localhost:27017,localhost:27018/winston?replicaSet=rs0' mocha test/*-test.js"
   },
   "typings": "./lib/winston-mongodb.d.ts"
